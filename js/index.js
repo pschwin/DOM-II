@@ -3,15 +3,29 @@
 //Variables
 
 const header = document.querySelector('header');
+const footer = document.querySelector('footer');
 const nav = document.querySelector('nav')
 const body = document.querySelector('body');
-//const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 const funnerBus = document.querySelector('header, nav, button');
 const busImage = document.querySelector('.intro img');
 const intro = document.querySelector('.intro');
 const mapImage = document.querySelector('.content-section img');
 const boatImg = document.querySelector('.inverse-content img');
 const destinationImg = document.querySelector('.content-destination img');
+const logo = document.querySelector('.logo-heading');
+const introh2 = document.querySelector('.intro h2');
+const contenth2 = document.querySelector('.content-section .text-content h2');
+const inverseContenth2 = document.querySelector('.inverse-content h2');
+const destinationContenth2 = document.querySelector('.content-destination h2');
+const contentPick = document.querySelector('.destination h4');
+const contentPick2 = document.querySelectorAll('.destination h4')[1];
+const contentPick3 = document.querySelectorAll('.destination h4')[2];
+const destButton = document.querySelector('.destination .btn');
+const destButton2 = document.querySelectorAll('.destination .btn')[1];
+const destButton3 = document.querySelectorAll('.destination .btn')[2];
+
+
+
 
 
 console.log(boatImg);
@@ -35,6 +49,20 @@ funnerBus.addEventListener('click', e => {
     body.style.fontFamily = "Eater";
     body.style.backgroundColor = "Black";
     body.style.color = "white";
+    logo.style.fontFamily = "Nosifer";
+    introh2.style.fontFamily = "Creepster";
+    contenth2.style.fontFamily = "Creepster";
+    inverseContenth2.style.fontFamily = "Creepster";
+    destinationContenth2.style.fontFamily = "Creepster";
+    footer.style.backgroundColor ="Red";
+    contentPick.style.fontFamily = "Creepster";
+    contentPick2.style.fontFamily = "Creepster";
+    contentPick3.style.fontFamily = "Creepster";
+    destButton.style.backgroundColor = "red";
+    destButton2.style.backgroundColor = "red";
+    destButton3.style.backgroundColor = "red";
+   
+
     //headings.style.fontFamily = "Creepster";
 
     //Event Listener 2
