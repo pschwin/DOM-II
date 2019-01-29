@@ -23,6 +23,7 @@ const contentPick3 = document.querySelectorAll('.destination h4')[2];
 const destButton = document.querySelector('.destination .btn');
 const destButton2 = document.querySelectorAll('.destination .btn')[1];
 const destButton3 = document.querySelectorAll('.destination .btn')[2];
+const destination = document.querySelector('.content-pick');
 
 
 
@@ -70,9 +71,6 @@ funnerBus.addEventListener('click', e => {
     busImage.addEventListener('mouseover', e2 => {
 
         busImage.setAttribute('src', 'img/160906-clowns-in-nc-feature.jpg');
-        // let newClown = document.createElement('img');
-        // newClown.setAttribute('src', 'img/160906-clowns-in-nc-feature.jpg');
-        // intro.appendChild(newClown);
         busImage.style.filter = "grayscale(100%)";
         busImage.style.borderRadius = "10px";
 
@@ -100,7 +98,7 @@ funnerBus.addEventListener('click', e => {
 
     //Event Listener 5
 
-    destinationImg.addEventListener('mouseover', e4 => {
+    destinationImg.addEventListener('mouseover', e5 => {
 
         
         destinationImg.setAttribute('src', 'img/5f15e5c1ccd5b4a2cedbdf3a1250673a.jpg');
@@ -108,6 +106,14 @@ funnerBus.addEventListener('click', e => {
         destinationImg.style.textAlign = "Center";
 
     });
+
+    //Event Listener 6
+
+    destButton.addEventListener('click', e6 =>{
+        let newClown = document.createElement('img');
+        newClown.setAttribute('src', 'img/creepy-clowns_t750x550.jpg');
+        destination.appendChild(newClown);
+    })
 
 
 });
