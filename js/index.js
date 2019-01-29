@@ -2,6 +2,7 @@
 
 //Variables
 
+
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 const nav = document.querySelector('nav')
@@ -24,12 +25,6 @@ const destButton = document.querySelector('.destination .btn');
 const destButton2 = document.querySelectorAll('.destination .btn')[1];
 const destButton3 = document.querySelectorAll('.destination .btn')[2];
 const destination = document.querySelector('.content-pick');
-
-
-
-
-
-console.log(boatImg);
 
 
 //New Nav appendChild
@@ -62,7 +57,7 @@ funnerBus.addEventListener('click', e => {
     destButton.style.backgroundColor = "red";
     destButton2.style.backgroundColor = "red";
     destButton3.style.backgroundColor = "red";
-   
+    destination.style.flexWrap = "Wrap";
 
     //headings.style.fontFamily = "Creepster";
 
@@ -112,8 +107,59 @@ funnerBus.addEventListener('click', e => {
     destButton.addEventListener('click', e6 =>{
         let newClown = document.createElement('img');
         newClown.setAttribute('src', 'img/creepy-clowns_t750x550.jpg');
+        newClown.setAttribute('class', 'newClownDisplayed');
         destination.appendChild(newClown);
+        newClown.style.maxWidth = "33%";
+        newClown.style.height = "250px";
     })
+
+
+    //Event Listener 7
+
+    destButton2.addEventListener('click', e7 =>{
+        let newClown2 = document.createElement('img');
+        newClown2.setAttribute('src', 'img/clown-617092.jpg');
+        destination.appendChild(newClown2);
+        newClown2.style.maxWidth = "33%";
+        newClown2.style.height = "250px";
+    })
+
+
+    //Event Listener 8
+
+    destButton3.addEventListener('click', e8 =>{
+        let newClown3 = document.createElement('img');
+        newClown3.setAttribute('src', 'img/ap_366319702682_22eed5da02fd240b50b4b30fa2109559.fit-760w.jpg');
+        destination.appendChild(newClown3);
+        newClown3.style.maxWidth = "33%";
+        newClown3.style.height = "250px";
+    })
+
+    //Event Listener 9
+
+    introh2.addEventListener('dblclick', e9 =>{
+        let newHeader = document.createElement('h2');
+        newHeader.textContent += `You're Decision is Regrettable`;
+        introh2.appendChild(newHeader);
+        newHeader.style.fontFamily = "Creepster";
+    })
+
+    //Event Listener 10
+
+    body.addEventListener('keydown', e10 =>{
+        let warningHeader = document.createElement('div');
+        let warningMessage = document.createElement('h1');
+        warningMessage.textContent += "Do it Again, I dare You";
+        warningMessage.style.textAlign = "Center";
+        warningHeader.style.height = "350px";
+        warningHeader.style.backgroundColor = "Black";
+        body.prepend(warningMessage);
+
+    });
+
+
+
+
 
 
 });
