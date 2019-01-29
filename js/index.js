@@ -9,9 +9,12 @@ const body = document.querySelector('body');
 const funnerBus = document.querySelector('header, nav, button');
 const busImage = document.querySelector('.intro img');
 const intro = document.querySelector('.intro');
+const mapImage = document.querySelector('.content-section img');
+const boatImg = document.querySelector('.inverse-content img');
+const destinationImg = document.querySelector('.content-destination img');
 
 
-console.log(busImage);
+console.log(boatImg);
 
 
 //New Nav appendChild
@@ -23,11 +26,11 @@ newNav.style.fontSize = "20px";
 
 //Fix Nav Style
 
-nav.style.width ="80%";
+nav.style.width = "80%";
 
 
 //Event Listener 1
-funnerBus.addEventListener ('click', e => {
+funnerBus.addEventListener('click', e => {
     header.style.backgroundColor = "red";
     body.style.fontFamily = "Eater";
     body.style.backgroundColor = "Black";
@@ -36,7 +39,7 @@ funnerBus.addEventListener ('click', e => {
 
     //Event Listener 2
 
-    busImage.addEventListener ('mouseover', e2 =>{
+    busImage.addEventListener('mouseover', e2 => {
 
         busImage.setAttribute('src', 'img/160906-clowns-in-nc-feature.jpg');
         // let newClown = document.createElement('img');
@@ -44,10 +47,39 @@ funnerBus.addEventListener ('click', e => {
         // intro.appendChild(newClown);
         busImage.style.filter = "grayscale(100%)";
         busImage.style.borderRadius = "10px";
-    
+
     });
 
+
     //Event Listener 3
+
+    mapImage.addEventListener('mouseover', e3 => {
+
+        mapImage.setAttribute('src', 'img/helium_red_ballon.jpg');
+        mapImage.style.borderRadius = "10px";
+
+    });
+
+    //Event Listener 4
+
+    boatImg.addEventListener('mouseover', e4 => {
+
+        
+        boatImg.setAttribute('src', 'img/Creepy-van.jpg');
+        boatImg.style.borderRadius = "10px";
+
+    });
+
+    //Event Listener 5
+
+    destinationImg.addEventListener('mouseover', e4 => {
+
+        
+        destinationImg.setAttribute('src', 'img/5f15e5c1ccd5b4a2cedbdf3a1250673a.jpg');
+        destinationImg.style.borderRadius = "10px";
+        destinationImg.style.textAlign = "Center";
+
+    });
 
 
 });
