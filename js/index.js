@@ -59,7 +59,6 @@ funnerBus.addEventListener('click', e => {
     destButton3.style.backgroundColor = "red";
     destination.style.flexWrap = "Wrap";
 
-    //headings.style.fontFamily = "Creepster";
 
     //Event Listener 2
 
@@ -154,8 +153,11 @@ funnerBus.addEventListener('click', e => {
         warningHeader.style.height = "350px";
         warningHeader.style.backgroundColor = "Black";
         body.prepend(warningMessage);
+        warningMessage.style.fontFamily ="Nosifer";
 
     });
+
+    //Make sure events don't repeat
 
 
 
