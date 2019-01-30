@@ -44,7 +44,7 @@ nav.style.width = "80%";
 
 
 //Event Listener 1
-    funnerBus.addEventListener('click', e => {
+funnerBus.addEventListener('click', e => {
     header.style.backgroundColor = "red";
     body.style.fontFamily = "Eater";
     body.style.backgroundColor = "Black";
@@ -71,6 +71,8 @@ nav.style.width = "80%";
     newBtn.style.fontSize = "20px";
     newBtn.style.marginLeft = "50px";
 
+    TweenMax.to(newBtn, 5, {left:600, backgroundColor:"red"} );
+
     //Event Listener 2
 
     busImage.addEventListener('mouseover', e2 => {
@@ -82,12 +84,12 @@ nav.style.width = "80%";
         //Event Listener 4
 
         boatImg.addEventListener('mouseover', e4 => {
-        boatImg.setAttribute('src', 'img/Creepy-van.jpg');
-        boatImg.style.borderRadius = "10px";
+            boatImg.setAttribute('src', 'img/Creepy-van.jpg');
+            boatImg.style.borderRadius = "10px";
 
-        e4.stopPropagation();
+            e4.stopPropagation();
 
-    });
+        });
 
     });
 
@@ -101,7 +103,7 @@ nav.style.width = "80%";
 
     });
 
-    
+
 
     //Event Listener 5
 
@@ -154,7 +156,7 @@ nav.style.width = "80%";
         newHeader.textContent += `You're Decision is Regrettable`;
         introh2.appendChild(newHeader);
         newHeader.style.fontFamily = "Creepster";
-       
+
     })
 
     //Event Listener 10
