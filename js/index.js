@@ -5,7 +5,8 @@
 
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
-const nav = document.querySelector('nav')
+const nav = document.querySelector('nav');
+const navA = document.querySelector('nav a');
 const body = document.querySelector('body');
 const funnerBus = document.querySelector('header, nav, button');
 const busImage = document.querySelector('.intro img');
@@ -26,6 +27,7 @@ const destButton2 = document.querySelectorAll('.destination .btn')[1];
 const destButton3 = document.querySelectorAll('.destination .btn')[2];
 const destination = document.querySelector('.content-pick');
 
+console.log(navA);
 
 //New Nav appendChild
 let newNav = document.createElement('button');
@@ -42,7 +44,7 @@ nav.style.width = "80%";
 
 
 //Event Listener 1
-funnerBus.addEventListener('click', e => {
+    funnerBus.addEventListener('click', e => {
     header.style.backgroundColor = "red";
     body.style.fontFamily = "Eater";
     body.style.backgroundColor = "Black";
@@ -69,7 +71,6 @@ funnerBus.addEventListener('click', e => {
     newBtn.style.fontSize = "20px";
     newBtn.style.marginLeft = "50px";
 
-
     //Event Listener 2
 
     busImage.addEventListener('mouseover', e2 => {
@@ -78,27 +79,29 @@ funnerBus.addEventListener('click', e => {
         busImage.style.filter = "grayscale(100%)";
         busImage.style.borderRadius = "10px";
 
+        //Event Listener 4
+
+        boatImg.addEventListener('mouseover', e4 => {
+        boatImg.setAttribute('src', 'img/Creepy-van.jpg');
+        boatImg.style.borderRadius = "10px";
+
+        e4.stopPropagation();
+
+    });
+
     });
 
 
     //Event Listener 3
 
-    mapImage.addEventListener('mouseover', e3 => {
+    mapImage.addEventListener('wheel', e3 => {
 
         mapImage.setAttribute('src', 'img/helium_red_ballon.jpg');
         mapImage.style.borderRadius = "10px";
 
     });
 
-    //Event Listener 4
-
-    boatImg.addEventListener('mouseover', e4 => {
-
-
-        boatImg.setAttribute('src', 'img/Creepy-van.jpg');
-        boatImg.style.borderRadius = "10px";
-
-    });
+    
 
     //Event Listener 5
 
@@ -151,6 +154,7 @@ funnerBus.addEventListener('click', e => {
         newHeader.textContent += `You're Decision is Regrettable`;
         introh2.appendChild(newHeader);
         newHeader.style.fontFamily = "Creepster";
+       
     })
 
     //Event Listener 10
@@ -167,14 +171,11 @@ funnerBus.addEventListener('click', e => {
 
     });
 
-    //Make sure events don't repeat
-
-
-
-
-
-
 });
+
+//Prevent Nav Refreshing
+
+
 
 
 
