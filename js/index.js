@@ -86,8 +86,9 @@ funnerBus.addEventListener('click', e => {
         //busImage.style.filter = "grayscale(100%)";
         busImage.style.borderRadius = "10px";
 
-        //grayscale not supported?
+        //Is delay not supported on event listeners?
         TweenMax.to(busImage, 22, {filter: "grayscale(100%)"});
+        TweenMax.to (busImage, 3, {rotation: -360, repeat: -1});
 
         //Event Listener 4
 
