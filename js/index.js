@@ -36,6 +36,10 @@ nav.appendChild(newNav);
 newNav.style.fontFamily = "Eater";
 newNav.style.fontSize = "20px";
 
+TweenMax.to (newNav, 3, {rotation: 360, repeat: -1});
+
+    
+
 
 
 //Fix Nav Style
@@ -47,7 +51,8 @@ nav.style.width = "80%";
 funnerBus.addEventListener('click', e => {
     header.style.backgroundColor = "red";
     body.style.fontFamily = "Eater";
-    body.style.backgroundColor = "Black";
+    //body.style.backgroundColor = "Black";
+    TweenMax.to(body, 5, {backgroundColor: "#000000"});
     body.style.color = "white";
     logo.style.fontFamily = "Nosifer";
     introh2.style.fontFamily = "Creepster";
@@ -71,15 +76,18 @@ funnerBus.addEventListener('click', e => {
     newBtn.style.fontSize = "20px";
     newBtn.style.marginLeft = "50px";
 
-    TweenMax.to(newBtn, 5, {left:600, backgroundColor:"red"} );
+    TweenMax.to(newBtn, 5, {backgroundColor:"red"} );
 
     //Event Listener 2
 
     busImage.addEventListener('mouseover', e2 => {
 
         busImage.setAttribute('src', 'img/160906-clowns-in-nc-feature.jpg');
-        busImage.style.filter = "grayscale(100%)";
+        //busImage.style.filter = "grayscale(100%)";
         busImage.style.borderRadius = "10px";
+
+        //grayscale not supported?
+        TweenMax.to(busImage, 22, {filter: "grayscale(100%)"});
 
         //Event Listener 4
 
@@ -167,9 +175,15 @@ funnerBus.addEventListener('click', e => {
         warningMessage.textContent += "Do it Again, I dare You";
         warningMessage.style.textAlign = "Center";
         warningHeader.style.height = "350px";
-        warningHeader.style.backgroundColor = "Black";
+
+        //I'm assuming these animation don't work with event listeners?
+        //Changes the background, but the delay effect isn't there
+        TweenMax.to(warningHeader, 7, {backgroundColor:"#000000"} );
+        //warningHeader.style.backgroundColor = "Black";
         body.prepend(warningMessage);
         warningMessage.style.fontFamily = "Nosifer";
+
+        
 
     });
 
