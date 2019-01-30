@@ -34,6 +34,8 @@ nav.appendChild(newNav);
 newNav.style.fontFamily = "Eater";
 newNav.style.fontSize = "20px";
 
+
+
 //Fix Nav Style
 
 nav.style.width = "80%";
@@ -50,7 +52,7 @@ funnerBus.addEventListener('click', e => {
     contenth2.style.fontFamily = "Creepster";
     inverseContenth2.style.fontFamily = "Creepster";
     destinationContenth2.style.fontFamily = "Creepster";
-    footer.style.backgroundColor ="Red";
+    footer.style.backgroundColor = "Red";
     contentPick.style.fontFamily = "Creepster";
     contentPick2.style.fontFamily = "Creepster";
     contentPick3.style.fontFamily = "Creepster";
@@ -58,6 +60,14 @@ funnerBus.addEventListener('click', e => {
     destButton2.style.backgroundColor = "red";
     destButton3.style.backgroundColor = "red";
     destination.style.flexWrap = "Wrap";
+
+    //New Begin Button
+    let newBtn = document.createElement('button');
+    newBtn.textContent = "Double Click to Begin the FUN";
+    introh2.appendChild(newBtn);
+    newBtn.style.fontFamily = "Eater";
+    newBtn.style.fontSize = "20px";
+    newBtn.style.marginLeft = "50px";
 
 
     //Event Listener 2
@@ -84,7 +94,7 @@ funnerBus.addEventListener('click', e => {
 
     boatImg.addEventListener('mouseover', e4 => {
 
-        
+
         boatImg.setAttribute('src', 'img/Creepy-van.jpg');
         boatImg.style.borderRadius = "10px";
 
@@ -94,7 +104,7 @@ funnerBus.addEventListener('click', e => {
 
     destinationImg.addEventListener('mouseover', e5 => {
 
-        
+
         destinationImg.setAttribute('src', 'img/5f15e5c1ccd5b4a2cedbdf3a1250673a.jpg');
         destinationImg.style.borderRadius = "10px";
         destinationImg.style.textAlign = "Center";
@@ -103,7 +113,7 @@ funnerBus.addEventListener('click', e => {
 
     //Event Listener 6
 
-    destButton.addEventListener('click', e6 =>{
+    destButton.addEventListener('click', e6 => {
         let newClown = document.createElement('img');
         newClown.setAttribute('src', 'img/creepy-clowns_t750x550.jpg');
         newClown.setAttribute('class', 'newClownDisplayed');
@@ -115,7 +125,7 @@ funnerBus.addEventListener('click', e => {
 
     //Event Listener 7
 
-    destButton2.addEventListener('click', e7 =>{
+    destButton2.addEventListener('click', e7 => {
         let newClown2 = document.createElement('img');
         newClown2.setAttribute('src', 'img/clown-617092.jpg');
         destination.appendChild(newClown2);
@@ -126,7 +136,7 @@ funnerBus.addEventListener('click', e => {
 
     //Event Listener 8
 
-    destButton3.addEventListener('click', e8 =>{
+    destButton3.addEventListener('click', e8 => {
         let newClown3 = document.createElement('img');
         newClown3.setAttribute('src', 'img/ap_366319702682_22eed5da02fd240b50b4b30fa2109559.fit-760w.jpg');
         destination.appendChild(newClown3);
@@ -136,7 +146,7 @@ funnerBus.addEventListener('click', e => {
 
     //Event Listener 9
 
-    introh2.addEventListener('dblclick', e9 =>{
+    introh2.addEventListener('dblclick', e9 => {
         let newHeader = document.createElement('h2');
         newHeader.textContent += `You're Decision is Regrettable`;
         introh2.appendChild(newHeader);
@@ -145,7 +155,7 @@ funnerBus.addEventListener('click', e => {
 
     //Event Listener 10
 
-    body.addEventListener('keydown', e10 =>{
+    body.addEventListener('keydown', e10 => {
         let warningHeader = document.createElement('div');
         let warningMessage = document.createElement('h1');
         warningMessage.textContent += "Do it Again, I dare You";
@@ -153,7 +163,7 @@ funnerBus.addEventListener('click', e => {
         warningHeader.style.height = "350px";
         warningHeader.style.backgroundColor = "Black";
         body.prepend(warningMessage);
-        warningMessage.style.fontFamily ="Nosifer";
+        warningMessage.style.fontFamily = "Nosifer";
 
     });
 
